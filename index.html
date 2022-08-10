@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang = "ko">
+	<head>
+	
+	<link rel="stylesheet" type="text/css" href="semantic/semantic.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<script
+		 src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+		 crossorigin="anonymous"></script>
+	<script src="semantic/semantic.js"></script>
+	
+	<meta charset = "UTF-8">
+	<title>자양화</title>
+	
+	</head>
+
+	<body>
+	
+	<div id = "sidebar1" class = "ui vertical inverted sidebar menu">
+		<div class = "item">
+			<a class = "ui logo icon image" href = "index.html">
+				<img src = "./images/logo.png">
+			</a>
+			<a href = "/">
+				<b>logo</b>
+			</a>
+		</div>
+		
+		<div class = "item">
+			<a href = "index.html">
+				<img src = "./images/logo.png">
+				<b>logo</b>
+			</a>
+		</div>
+		
+	
+	
+	</div>
+	
+	<div class = "main_menu">
+		<div class="pusher">
+				<button id = "sidebar_button" class="ui button">
+					<i class="align justify icon"></i>
+				</button>
+		</div>
+		
+		<div class = "text"></div>
+		
+	</div>
+	
+	<script>
+	
+			$('#sidebar_button').click(function(){
+				$('#sidebar1')
+				.sidebar('toggle');
+			});
+			
+	</script>
+	
+	</body>
+
+</html>

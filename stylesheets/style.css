@@ -83,3 +83,11 @@ item > .b {
 	color : white;
 	background-image :  url("../images/background_image.jpg");
 }
+
+.buttons {
+	padding : 20px;
+	text-align : center;
+}
+.buttons > .button {
+	padding : 1rem;
+}

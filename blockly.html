@@ -6,28 +6,64 @@
 <head>
     <script>
         var toolbox = {
-        "kind": "flyoutToolbox",
+        "kind": "categoryToolbox",
         "contents": [
+        {
+            "kind" : "category",
+            "name" : "Control",
+            "contents" : [
+                {
+                    "kind": "block",
+                    "type": "controls_if"
+                },
+                {
+                    "kind": "block",
+                    "type": "controls_repeat_ext"
+                }
+            ]
+        },
+        {
+            "kind" : "category",
+            "name" : "Logic",
+            "contents" : [
+                {
+                    "kind": "block",
+                    "type": "logic_compare"
+                }
+            ]
+        },
+        {
+            "kind" : "category",
+            "name" : "Math",
+            "contents" : [
+                {
+                    "kind": "block",
+                    "type": "math_number"
+                },
+                {
+                    "kind": "block",
+                    "type": "math_arithmetic"
+                },
+            ]
+        },
+        {
+            "kind" : "category",
+            "name" : "Math",
+            "contents" : [
             {
-            "kind": "block",
-            "type": "controls_if"
+                "kind": "block",
+                "type": "math_number"
             },
             {
-            "kind": "block",
-            "type": "controls_repeat_ext"
+                "kind": "block",
+                "type": "math_arithmetic"
             },
-            {
-            "kind": "block",
-            "type": "logic_compare"
-            },
-            {
-            "kind": "block",
-            "type": "math_number"
-            },
-            {
-            "kind": "block",
-            "type": "math_arithmetic"
-            },
+            ]
+        },
+        {
+            "kind" : "category",
+            "name" : "Text",
+            "contents" : [
             {
             "kind": "block",
             "type": "text"
@@ -36,6 +72,9 @@
             "kind": "block",
             "type": "text_print"
             },
+            ]
+        },
+
         ]
         }
     </script>
@@ -47,6 +86,6 @@
     </div>
 
     <script>
-        var workspace = Blockly.inject('blocklyDiv', {toolbox: toolbox});
+    var workspace = Blockly.inject('blocklyDiv', {toolbox: toolbox});
     </script>
 </body>

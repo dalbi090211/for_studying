@@ -1,11 +1,14 @@
+//blockly라이브러리 참조주소
 <script src="./hhk/blockly_compressed.js"></script>
 <script src="./hhk/blocks_compressed.js"></script>
 <script src="./hhk/javascript_compressed.js"></script>
 <script src="./hhk/msg/js/ko.js"></script>
+//커스텀블록참조
+<script src="./custom_blocks.js"></script>
 
 <head>
     <script>
-        var toolbox = {
+        var toolbox = { //toolbox에 대한 정의. 각각의 카테고리, 블록들은 {}로 구분하고 전체를 []로 묶음.
         "kind": "categoryToolbox",
         "contents": [
         {
@@ -29,6 +32,10 @@
                 {
                     "kind": "block",
                     "type": "logic_compare"
+                },
+                {
+                    "kind" : "block",
+                    "type" : "lightswitch"
                 }
             ]
         },
@@ -48,29 +55,15 @@
         },
         {
             "kind" : "category",
-            "name" : "Math",
-            "contents" : [
-            {
-                "kind": "block",
-                "type": "math_number"
-            },
-            {
-                "kind": "block",
-                "type": "math_arithmetic"
-            },
-            ]
-        },
-        {
-            "kind" : "category",
             "name" : "Text",
             "contents" : [
             {
-            "kind": "block",
-            "type": "text"
+                "kind": "block",
+                "type": "text"
             },
             {
-            "kind": "block",
-            "type": "text_print"
+                "kind": "block",
+                "type": "text_print"
             },
             ]
         },
@@ -81,7 +74,8 @@
 </head>
 
 <body>
-    <div id = "blocklyDiv" style = "height : 480px; width : 600px">
+ 
+    <div id = "blocklyDiv" style = "height : 480px; width : 600px">   //사용자가 block들을 조작할수있는창
         
     </div>
 

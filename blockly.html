@@ -8,6 +8,17 @@
 <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 
 <head>
+
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<script
+		 src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+		 crossorigin="anonymous"></script>
+	<script src="semantic/semantic.js"></script>
+
+    <title>blockly</title>
+
     <script>
         var toolbox = { 
         "kind": "categoryToolbox",
@@ -74,7 +85,7 @@
     </script>
     <style>
         body {
-            padding : 1rem;
+            margin: 0px 5px 5px;    
             font-family: Lato;
         }
     </style>
@@ -82,12 +93,37 @@
 </head>
 
 <body>
- 
-    <p>
-        <button onclick="runCode()"> Run Code</button>
-    </p>
-    <div id = "blocklyDiv" style = "height : 480px; width : 600px">   
-    </div>
+
+    <div id = "sidebar1" class = "ui vertical inverted visible sidebar menu">
+	
+		<div class = "item">
+			<a class = "ui logo icon image" href = "index.html">
+				<img src = "./images/logo.png">
+			</a>
+			<a href = "index.html">
+				<b>logo</b>
+			</a>
+		</div>
+		
+		<div class = "item">
+			<b><a href = "js.html">Javasciprt</b>
+		</div>
+		
+		<div class = "item">
+			<a href = "blockly.html">
+				<b>blockly</b>
+			</a>
+		</div>
+		
+	</div>
+    
+    <div class = "blcokly_menu">
+        <p>
+            <button class = "ui button" onclick="runCode()">Run Code</button>
+        </p>
+
+        <div id = "blocklyDiv" style = "height : 480px; width : 600px"></div>
+    </div>  
 
     <script>
     var workspace = Blockly.inject('blocklyDiv', {toolbox: toolbox});

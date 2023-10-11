@@ -1,0 +1,89 @@
+<!DOCTYPE html>						
+<html>											
+	<head>		
+        <!--semantic ui 프레임워크를 적용하기 위해 link-->				
+        <link rel="stylesheet" type="text/css" href="../semantic/semantic.css">
+        <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+        <script src="../semantic/semantic.js"></script>
+
+        <!--제목-->    
+        <title>						
+        조회화면					
+        </title>												
+	</head>						
+			
+    <!--body에서 페이지의 요소들을 배치 및 기능을 구현-->
+	<body onload = "
+
+    const table = document.getElementById('dynamicTable');
+    const tableRowLength = table.rows.length;
+    for(var i = tableRowLength; i < tableRowLength + 7; i ++){
+      const newRow = table.insertRow(i);
+      // 새 행(Row)에 Cell 추가
+      newRow.insertCell(0).innerText = '010-1234-2233';
+      newRow.insertCell(1).innerText = '김명석';
+      newRow.insertCell(2).innerText = 'f';
+      newRow.insertCell(3).innerText = '23';
+      /*  id로 onclick하건 그냥 onclick이벤트를 달건 나중에 달아줘야함  */
+      newRow.insertCell(4).insertAdjacentHTML('afterbegin', `<button class='ui button'>수정</button>`);
+      newRow.insertCell(5).insertAdjacentHTML('afterbegin', `<button class='ui button'>삭제</button>`);
+    }
+  ">	
+          <form class="ui form" 
+          style ="margin-top:5%;
+                  margin-right:5%;
+                  margin-bottom:10%;
+                  margin-left:5%;
+          ">
+            <h2 class="ui dividing header">조회</h2>
+            <table class="ui celled table" id = "dynamicTable">
+                <thead>
+                    <tr>
+                        <th>전화번호</th>
+                        <th>이름</th>
+                        <th>성별</th>
+                        <th>나이</th>
+                        <th>수정</th>
+                        <th>삭제</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="phoneNumber">James</td>
+                    <td data-label="name">24</td>
+                    <td data-label="gender">Engineer</td>
+                    <td data-label="age">Engineer</td>
+                    <!--
+                    <button class="ui button">수정</button>
+                    <button class="ui button">삭제</button>
+                    -->
+                  </tr>
+                  <tr>
+                    <td data-label="phoneNumber">James</td>
+                    <td data-label="name">24</td>
+                    <td data-label="gender">Engineer</td>
+                    <td data-label="age">Engineer</td>
+                  </tr>
+                  <tr>
+                    <td data-label="phoneNumber">James</td>
+                    <td data-label="name">24</td>
+                    <td data-label="gender">Engineer</td>
+                    <td data-label="age">Engineer</td>
+                  </tr>
+                </tbody>
+              </table>
+           
+        </form>
+
+        <script>
+         
+
+
+        </script>
+
+	</body>						
+							
+</html>							

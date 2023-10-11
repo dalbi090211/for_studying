@@ -1,0 +1,79 @@
+<!DOCTYPE html>						
+<html>											
+	<head>		
+        <!--semantic ui 프레임워크를 적용하기 위해 link-->				
+        <link rel="stylesheet" type="text/css" href="../semantic/semantic.css">
+        <!--작성한 stylesheet을 적용하기 위해 link-->
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+        <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+        <script src="../semantic/semantic.js"></script>
+
+        <!--제목-->    
+        <title>						
+        테스트					
+        </title>												
+	</head>						
+			
+    <!--body에서 페이지의 요소들을 배치 및 기능을 구현-->
+	<body>	    
+        <form class="ui form" 
+            style ="margin-top:2.5%;
+                    margin-right:5%;
+                    margin-bottom:10%;
+                    margin-left:5%;
+            ">
+            <h2 class="ui dividing header">전화번호부 등록</h2>
+
+            <!--필수로 들어가야하는 정보들. 체크가 이루어져야함-->
+            <h4 class="ui dividing header">필수정보</h4>
+            <div class="four wide field">
+                <label>전화번호</label>
+                <input type="text" id="phoneNumber" placeholder="전화번호 사이에 -를 붙여주세요">
+              </div>
+            <div class="three wide field">
+                <label>이름</label>
+                <input type="text" id="name" placeholder="이름">
+            </div>
+
+            <!--없어도 되는 정보들. 체크하지 않아도됨-->
+            <h4 class="ui dividing header">세부정보</h4>
+
+            <!--2개의 field클래스(name, age)를 포함-->
+            <div class = "fields">
+                <!--gender를 받을 field-->
+                <div class="field">
+                    <label>성별</label>
+                    <!--2개의 성별을 선택-->
+                    <select class="ui fluid search dropdown" name="gender[selection]">
+                        <option value=""></option>
+                        <option value="male">남성</option>
+                        <option value="female">여성</option>
+                    </select>
+                </div>
+                <!--age를 받을 field-->
+                <div class="field">
+                <!--입력칸의 크기를 3으로 제한-->
+                <label>나이</label>
+                <input type="text" name="age" maxlength="3" placeholder="age">
+                </div>
+            </div>
+            <button class="ui button" type="button", onclick = "saveButtonOnclick()">저장</button>
+            <button class="ui button" type="button", onclick = "cacelButtonOnclick()">취소</button>
+        </form>
+											  
+        <!--html내에서 원하는 기능을 구현하기 위해 js를 사용-->
+        <script type = "text/javascript">						
+                                                        
+            function saveButtonOnclick(){
+                var a = document.getElementById(phoneNumber).textContent;
+                console.log(a);
+            }	
+            									
+        </script>	
+
+	</body>						
+							
+</html>							

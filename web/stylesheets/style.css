@@ -91,3 +91,7 @@ item > .b {
 .buttons > .button {
 	padding : 1rem;
 }
+
+.sidebar1 {
+	position : relative;
+}

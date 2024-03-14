@@ -27,9 +27,9 @@
       // 새 행(Row)에 Cell 추가
       newRow.insertCell(0).innerText = '010-1234-2233';
       newRow.insertCell(1).innerText = '김명석';
-      newRow.insertCell(2).innerText = 'f';
+      newRow.insertCell(2).innerText = 'm';
       newRow.insertCell(3).innerText = '23';
-      /*  id로 onclick하건 그냥 onclick이벤트를 달건 나중에 달아줘야함  */
+      /*  id로 onclick하건 그냥 onclick이벤트를 달건 나중에 데이터 가져오는 함수 달아줘야함  */
       newRow.insertCell(4).insertAdjacentHTML('afterbegin', `<button class='ui button'>수정</button>`);
       newRow.insertCell(5).insertAdjacentHTML('afterbegin', `<button class='ui button'>삭제</button>`);
     }
@@ -53,28 +53,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td data-label="phoneNumber">James</td>
-                    <td data-label="name">24</td>
-                    <td data-label="gender">Engineer</td>
-                    <td data-label="age">Engineer</td>
-                    <!--
-                    <button class="ui button">수정</button>
-                    <button class="ui button">삭제</button>
-                    -->
-                  </tr>
-                  <tr>
-                    <td data-label="phoneNumber">James</td>
-                    <td data-label="name">24</td>
-                    <td data-label="gender">Engineer</td>
-                    <td data-label="age">Engineer</td>
-                  </tr>
-                  <tr>
-                    <td data-label="phoneNumber">James</td>
-                    <td data-label="name">24</td>
-                    <td data-label="gender">Engineer</td>
-                    <td data-label="age">Engineer</td>
-                  </tr>
                 </tbody>
               </table>
            

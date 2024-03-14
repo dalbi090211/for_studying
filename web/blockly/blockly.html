@@ -95,34 +95,35 @@
 
 <body>
 
-    <div id = "sidebar1" class = "ui vertical inverted visible sidebar menu">
-	
-		<div class = "item">
-			<a class = "ui logo icon image" href = "index.html">
-				<img src = "../images/gomduri.png">
-			</a>
-			<a href = "index.html">
-				<b>logo</b>
-			</a>
-		</div>
-		
-		<div class = "item">
-			<b><a href = "../js.html">Javasciprt</b>
-		</div>
-		
-		<div class = "item">
-			<a href = "blockly.html">
-				<b>blockly</b>
-			</a>
-		</div>
-		
-	</div>
-    
-    <div class = "blcokly_menu">
-        <button class = "ui button" onclick="runCode()">Run Code</button>
-
-        <div id = "blocklyDiv" style = "height : 480px; width : 600px"></div>
-    </div>  
+    <div>
+        <div id = "sidebar1" class = "ui vertical inverted visible sidebar menu">
+        
+            <div class = "item">
+                <a class = "ui logo icon image" href = "index.html">
+                    <img src = "../images/gomduri.png">
+                </a>
+                <a href = "index.html">
+                    <b>logo</b>
+                </a>
+            </div>
+            
+            <div class = "item">
+                <b><a href = "../js.html">Javasciprt</b>
+            </div>
+            
+            <div class = "item">
+                <a href = "blockly.html">
+                    <b>blockly</b>
+                </a>
+            </div>
+            
+        </div>
+        
+        <div class = "blcokly_menu">
+            <button class = "ui button" onclick="runCode()">Run Code</button>
+            <div id = "blocklyDiv" style = "height : 480px; width : 600px"></div>
+        </div>  
+    </div>
 
     <script>
     var workspace = Blockly.inject('blocklyDiv', {toolbox: toolbox});
